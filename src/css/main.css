@@ -1,0 +1,90 @@
+:root{
+    --primary-color: rgba(252,114,23,1);
+    --primary-color-hover: rgba(252,114,23,0.75);
+    --primary-color-disabled: rgba(252,114,23,0.25);
+}
+
+.text-primary{
+    color: var(--primary-color) !important;
+}
+
+.bg-primary{
+    background-color: var(--primary-color) !important;
+}
+
+.hr-primary{
+    background-color: var(--primary-color) !important;
+    opacity: 1 !important;
+    border: 0 !important;
+}
+.border-primary{
+    border-color: var(--primary-color) !important;
+}
+
+.navbar-primary{
+    --bs-navbar-color: var(--primary-color);
+    --bs-navbar-hover-color: var(--primary-color-hover);
+    --bs-navbar-disabled-color: var(--primary-color-disabled);
+}
+.navbar .navbar-nav .nav-item .nav-link.active{
+    color: white !important;
+}
+.s-heading-primary::after{
+    background-color: var(--primary-color) !important;
+    width: 5% !important;
+    height: 0.5vh !important;
+    content: "";
+    display: block !important;
+}
+
+.text-center .s-heading-primary::after{
+    margin: auto !important;
+}
+
+.text-end .s-heading-primary::after{
+    margin: auto 0 auto auto !important;
+}
+
+.project-card .card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-list{
+    max-height: 70vh;
+    /* height: 70vh; */
+    overflow-y: auto;
+}
+
+.experience-card{
+    position: relative !important;
+}
+.experience-card .experience-body .experience-title{
+    font-size: 1.00rem !important;
+}
+.experience-card .experience-body .experience-org, .experience-card .experience-body .experience-loc, .experience-card .experience-body .experience-duration{
+    font-size: 0.85rem !important;
+}
+.experience-card .experience-body .experience-desc{
+    font-size: 0.85rem !important;
+}
+.w-30{
+    width: 30%!important;
+}
+
+@media screen and (min-width: 991px){
+    .experience-card{
+        position: absolute !important;
+        left: 45% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .experience-section{
+        position: relative !important;
+        margin-left: 10vw !important;
+    }
+}
