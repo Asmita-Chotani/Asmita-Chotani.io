@@ -53,35 +53,3 @@ function projectCard(projectTitle, projectDescription, projectTopics, projectLan
     cardParent.appendChild(card);
     return cardParent;
 }
-$.ajax({
-    method: 'GET',
-    url: "https://api.github.com/users/rjrakshit24/repos",
-    dataType: "json",
-    mimeType: "application/json",
-    success: function(data) {
-        const projectList = $('#projectList');
-        console.log(projectList);
-        $(projectList).empty();
-        console.log($(projectList))
-        data.filter(element => element.topics.includes('live')).forEach(element => {$(projectList).append(projectCard(element.name, element.description, element.topics, element.language, element.html_url));});
-        console.log($(projectList))
-        //console.log(projectCard(data[0].name, data[0].description, data[0].topics, data[0].language));
-    },
-    error: function(data) {}   // error handler,
-})
-
-{/* <div class="card project-card">
-    <div class="card-body">
-        <h5 class="card-title text-primary"><span><i class="fa-solid fa-book-bookmark me-2"></i></span><span class="fw-semibold">authd</span></h5>
-        <p class="card-text">Authenticated Service is a password protected network service developed with defence against DOS, password brute-force, Slowloris attacks along with client concurrency and invalid requests identification.</p>
-        <div>
-            <span class="badge rounded-pill text-bg-success opacity-75">cybersecurity</span>
-            <span class="badge rounded-pill text-bg-success opacity-75">protobuf3</span>
-            <span class="badge rounded-pill text-bg-success opacity-75">network-security</span>
-        </div>
-        <div class="my-1">
-            <span class="badge rounded-pill text-bg-primary opacity-75">Python</span>
-            <!-- <span class="fw-semibold text-secondary" style="font-size: 0.75rem;">Last Updated</span> -->
-        </div>
-    </div>
-</div> */}

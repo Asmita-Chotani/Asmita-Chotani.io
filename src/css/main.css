@@ -1,11 +1,15 @@
 :root{
-    --primary-color: rgba(252,114,23,1);
-    --primary-color-hover: rgba(252,114,23,0.75);
+    --primary-color: rgb(23, 218, 252);
+    --primary-color-hover: rgba(23, 99, 252, 0.75);
     --primary-color-disabled: rgba(252,114,23,0.25);
 }
 
 .text-primary{
     color: var(--primary-color) !important;
+}
+
+.text-about{
+    color: black !important;
 }
 
 .bg-primary{
@@ -61,7 +65,7 @@
     overflow-y: auto;
 }
 
-.experience-card{
+/* .experience-card{
     position: relative !important;
 }
 .experience-card .experience-body .experience-title{
@@ -87,4 +91,56 @@
         position: relative !important;
         margin-left: 10vw !important;
     }
+} */
+
+.experience-card {
+    position: relative !important;
 }
+
+.experience-card .experience-body .experience-title {
+    font-size: 1.00rem !important;
+}
+
+.experience-card .experience-body .experience-org,
+.experience-card .experience-body .experience-loc,
+.experience-card .experience-body .experience-duration {
+    font-size: 0.85rem !important;
+}
+
+.experience-card .experience-body .experience-desc {
+    font-size: 0.85rem !important;
+}
+
+.w-30 {
+    width: 30% !important;
+}
+
+@media screen and (min-width: 991px) {
+    .experience-card {
+        position: absolute !important;
+        left: 45% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    
+    .experience-card + .experience-card {
+        top: 50px; /* Adjust this value to create vertical separation between cards */
+    }
+
+    .experience-section {
+        position: relative !important;
+        margin-left: 10vw !important;
+    }
+}
+
+.gmail-icon-link {
+    text-decoration: none;
+    color: #D14836; /* Set the desired icon color */
+    font-size: 24px; /* Set the desired icon size */
+  }
+  
+  .gmail-icon {
+    vertical-align: middle;
+    margin-right: 10px; /* Adjust the spacing between the icon and text */
+    width: 25px; /* Set the width of the icon */
+    height: 25px; /* Set the height of the icon */
+  }
