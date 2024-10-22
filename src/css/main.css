@@ -95,6 +95,8 @@
 
 .experience-card {
     position: relative !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+    transition: transform 0.2s;
 }
 
 .experience-card .experience-body .experience-title {
@@ -115,11 +117,12 @@
     width: 30% !important;
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 992px) {
     .experience-card {
         position: absolute !important;
         left: 45% !important;
         transform: translate(-50%, -50%) !important;
+        margin-bottom: 30px;
     }
     
     .experience-card + .experience-card {
@@ -144,3 +147,22 @@
     width: 25px; /* Set the width of the icon */
     height: 25px; /* Set the height of the icon */
   }
+
+
+
+/* Optional: Hover effect on cards */
+.experience-card:hover {
+    transform: translateY(-5px); /* Slightly lift the card on hover */
+}
+
+
+/* Adjusting spacing */
+.experience-title {
+    font-size: 1.25rem; /* Increase title font size */
+}
+
+.experience-org,
+.experience-loc,
+.experience-duration {
+    font-size: 0.9rem; /* Adjust font size for organization and location */
+}
